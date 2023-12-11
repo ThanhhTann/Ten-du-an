@@ -8,8 +8,8 @@ public class Calculator {
 
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        int a = 3;
-        int b = 5;
+        int a = 4; // Thay đổi giá trị từ 3 thành 4
+        int b = 6; // Thay đổi giá trị từ 5 thành 6
         int sum = calculator.add(a, b);
         System.out.println("Sum of " + a + " and " + b + " is: " + sum);
     }
@@ -17,16 +17,16 @@ public class Calculator {
     @Test
     public void testAddPass() {
         Calculator calculator = new Calculator();
-        int result = calculator.add(3, 5);
-        // Kết quả mong đợi là 8, nếu bằng nhau thì test pass
-        assertEquals(8, result);
+        int result = calculator.add(4, 6); // Thay đổi giá trị từ 3 và 5 thành 4 và 6
+        // Kết quả mong đợi là 10, nếu bằng nhau thì test pass
+        assertEquals(10, result);
     }
 
     @Test
     public void testAddFail() {
         Calculator calculator = new Calculator();
-        int result = calculator.add(3, 5);
-        // Kết quả mong đợi là 9 (sai), sẽ dẫn đến việc test fail
-        assertEquals(9, result);
+        int result = calculator.add(4, 6); // Thay đổi giá trị từ 3 và 5 thành 4 và 6
+        // Kết quả mong đợi là 11 (sai), sẽ dẫn đến việc test fail
+        assertEquals(11, result);
     }
 }
